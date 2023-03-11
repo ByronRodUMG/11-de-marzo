@@ -1,4 +1,40 @@
-﻿//void saludo(string nom_saludo)
+﻿bool palindromo(String nom)
+{
+    String nuevo = nom.ToUpper();
+    String r = "";
+    int longitud = nom.Length;
+    bool resultado = false;
+
+    for (int c = nuevo.Length - 1; c >= 0; c--)
+    {
+        r = r + nuevo[c].ToString().ToUpper();
+    }
+    
+    if (nuevo.Equals(r))
+    {
+        return true;
+    }
+    else
+    { 
+        return false;
+    }
+}
+
+bool resultado = false;
+string palabra = "";
+Console.Write("Ingresa una palabra para verificar si es un palindromo: ");
+palabra = Console.ReadLine();
+resultado = palindromo(palabra);
+if (resultado == true)
+{
+    Console.WriteLine("La palabra ingresada es un palíndromo.");
+}
+else
+{
+    Console.WriteLine("La palabra ingresada no es un palíndromo.");
+}
+
+//void saludo(string nom_saludo)
 //{
 //    Console.WriteLine($"Hola {nom_saludo}, gusto de saludarte!");
 //}
@@ -23,30 +59,6 @@
 //        //nom = nom.Substring(0, c);
 //    }
 //}
-bool palindromo(String nom)
-{
-    String nuevo = nom.ToUpper();
-    String r = "";
-    int longitud = nom.Length;
-
-    for (int c = nuevo.Length - 1; c >= 0; c--)
-    {
-        r = r + nuevo[c].ToString().ToLower();
-    }
-    
-    if (nuevo.Equals(r))
-    {
-        return true;
-    }
-    else
-    { return false; }
-}
-
-palindromo("OSO");
-if (palindromo==true)
-{
-
-}
 
 //void desglose(String nom)
 //{
