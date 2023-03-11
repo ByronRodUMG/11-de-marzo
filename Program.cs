@@ -3,11 +3,10 @@
     String nuevo = nom.ToUpper();
     String r = "";
     int longitud = nom.Length;
-    bool resultado = false;
-
+ 
     for (int c = nuevo.Length - 1; c >= 0; c--)
     {
-        r = r + nuevo[c].ToString().ToUpper();
+        r += nuevo[c].ToString().ToUpper();
     }
     
     if (nuevo.Equals(r))
@@ -27,11 +26,11 @@ palabra = Console.ReadLine();
 resultado = palindromo(palabra);
 if (resultado == true)
 {
-    Console.WriteLine("La palabra ingresada es un palíndromo.");
+    Console.WriteLine("La palabra ingresada SI es un palíndromo.");
 }
 else
 {
-    Console.WriteLine("La palabra ingresada no es un palíndromo.");
+    Console.WriteLine("La palabra ingresada NO es un palíndromo.");
 }
 
 //void saludo(string nom_saludo)
